@@ -18,21 +18,47 @@ let nickelNumber = 0;
 let pennyNumber = 0;
 
 if (Number.isNaN(amount)) {
-    console.log("Invalid.");
+    console.log("\nInvalid.");
 } else if (amount < MIN || amount > MAX) {
-    console.log("Invalid.");
+    console.log("\nInvalid.");
 } else {
-      let numberCents = amount * 100;
-      quarterNumber = Math.floor(numberCents/QUARTER_VALUE);
-      numberCents = (numberCents%QUARTER_VALUE);
+    let quarterDisplay;
+    let dimeDisplay;
+    let nickelDisplay;
+    let pennyDisplay;
 
-      dimeNumber = Math.floor(numberCents/DIME_VALUE);
-      numberCents = (numberCents % DIME_VALUE);
+    let numberCents = amount * 100;
 
-      nickelNumber = Math.floor(numberCents/NICKEL_VALUE);
-      numberCents = (numberCents % DIME_VALUE);
+    quarterNumber = Math.floor(numberCents/QUARTER_VALUE);
+    numberCents = (numberCents%QUARTER_VALUE);
+    if (quarterNumber == 1) {
+      quarterDisplay = (quarterNumber + " quarter, ");
+    } else  {
+      quarterDisplay = (quarterNumber + " quarters, ");
+    }
 
-      pennyNumber = numberCents/PENNY_VALUE;
+    dimeNumber = Math.floor(numberCents/DIME_VALUE);
+    numberCents = (numberCents % DIME_VALUE);
+    if (dimeNumber == 1) {
+      dimeDisplay = (dimeNumber + " dime, ");
+    } else  {
+      dimeDisplay = (dimeNumber + " dimes, ");
+    }
 
-    console.log(`\n${quarterNumber} quarters, ${dimeNumber} dimes, ${nickelNumber}  nickels, and ${pennyNumber} pennies.`)
+    nickelNumber = Math.floor(numberCents/NICKEL_VALUE);
+    numberCents = (numberCents % DIME_VALUE);
+    if (nickelNumber == 1) {
+      nickelDisplay = (nickelNumber + " nickel, ");
+    } else  {
+      nickelDisplay = (nickelNumber + " nickels, ");
+    }
+
+    pennyNumber = numberCents/PENNY_VALUE;
+    if (pennyNumber == 1) {
+      pennyDisplay = ("and " + pennyNumber + " penny.");
+    } else  {
+      pennyDisplay = ("and " + pennyNumber + " pennies.");
+    }
+
+    console.log("\n" + quarterDisplay + dimeDisplay + nickelDisplay + pennyDisplay);
 }
