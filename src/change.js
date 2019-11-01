@@ -26,7 +26,7 @@ if (Number.isNaN(amount)) {
     let numberCents = amount * 100;
 
     quarterNumber = Math.floor(numberCents/QUARTER_VALUE);
-    numberCents = (numberCents%QUARTER_VALUE);
+    numberCents = (numberCents % QUARTER_VALUE);
     if (quarterNumber === 1) {
       quarterDisplay = (quarterNumber + " quarter, ");
     } else  {
@@ -42,14 +42,14 @@ if (Number.isNaN(amount)) {
     }
 
     nickelNumber = Math.floor(numberCents/NICKEL_VALUE);
-    numberCents = (numberCents % DIME_VALUE);
+    numberCents = (numberCents % NICKEL_VALUE);
     if (nickelNumber === 1) {
       nickelDisplay = (nickelNumber + " nickel, ");
     } else  {
       nickelDisplay = (nickelNumber + " nickels, ");
     }
 
-    pennyNumber = numberCents/PENNY_VALUE;
+    pennyNumber = (numberCents/PENNY_VALUE);
     if (pennyNumber === 1) {
       pennyDisplay = ("and " + pennyNumber + " penny.");
     } else  {
