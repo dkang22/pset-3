@@ -23,10 +23,10 @@ if (Number.isNaN(amount)) {
     let dimeDisplay;
     let nickelDisplay;
     let pennyDisplay;
-    let numberCents = amount * 100;
+    let numberCents = Number(amount * 100);
 
     quarterNumber = Math.floor(numberCents/QUARTER_VALUE);
-    numberCents = (numberCents % QUARTER_VALUE);
+    numberCents = Number(numberCents % QUARTER_VALUE);
     if (quarterNumber === 1) {
       quarterDisplay = (quarterNumber + " quarter, ");
     } else  {
@@ -34,7 +34,7 @@ if (Number.isNaN(amount)) {
     }
 
     dimeNumber = Math.floor(numberCents/DIME_VALUE);
-    numberCents = (numberCents % DIME_VALUE);
+    numberCents = Number(numberCents % DIME_VALUE);
     if (dimeNumber === 1) {
       dimeDisplay = (dimeNumber + " dime, ");
     } else  {
@@ -42,19 +42,23 @@ if (Number.isNaN(amount)) {
     }
 
     nickelNumber = Math.floor(numberCents/NICKEL_VALUE);
-    numberCents = (numberCents % NICKEL_VALUE);
+    numberCents = Number(numberCents % NICKEL_VALUE);
     if (nickelNumber === 1) {
       nickelDisplay = (nickelNumber + " nickel, ");
     } else  {
       nickelDisplay = (nickelNumber + " nickels, ");
     }
 
-    pennyNumber = (numberCents/PENNY_VALUE);
-    if (pennyNumber === 1) {
-      pennyDisplay = ("and " + pennyNumber + " penny.");
+    if (numberCents === 0) {
+      pennyDisplay = ("and " + numberCents + " pennies.");
+    } else if (numberCents === 1) {
+      pennyDisplay = ("and " + numberCents + " penny.");
     } else  {
-      pennyDisplay = ("and " + pennyNumber + " pennies.");
+      pennyDisplay = ("and " + numberCents + " pennies.");
     }
 
     console.log("\n" + quarterDisplay + dimeDisplay + nickelDisplay + pennyDisplay);
 }
+
+
+//When entering 0.55, the penny value is messed up
