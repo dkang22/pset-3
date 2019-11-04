@@ -13,15 +13,15 @@ if (Number.isNaN(firstNumber || secondNumber || thirdNumber)) {
 } else if ((firstNumber || secondNumber || thirdNumber) < MIN || (firstNumber || secondNumber || thirdNumber) > MAX) {
     console.log("\nInvalid.");
 } else if ((firstNumber < secondNumber) && (secondNumber < thirdNumber)) {
-  console.log("\nStrictly increasing.");
+    console.log("\nStrictly increasing.");
 } else if ((firstNumber <= secondNumber && secondNumber < thirdNumber) || (firstNumber < secondNumber && secondNumber <= thirdNumber)) {
-  console.log("\nIncreasing.");
+    console.log("\nIncreasing.");
 } else if ((firstNumber > secondNumber) && (secondNumber > thirdNumber)) {
-  console.log("\nStrictly decreasing.");
+    console.log("\nStrictly decreasing.");
 } else if ((firstNumber >= secondNumber) && (secondNumber > thirdNumber) || (firstNumber > secondNumber) && (secondNumber >= thirdNumber)) {
-  console.log("\nDecreasing.");
+    console.log("\nDecreasing.");
 } else if ((firstNumber === secondNumber) && (secondNumber === thirdNumber)) {
-  console.log("\nEqual.");
+    console.log("\nEqual.");
 } else {
-  console.log("\nUnordered.");
+    console.log("\nUnordered.");
 }

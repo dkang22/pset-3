@@ -28,33 +28,33 @@ if (Number.isNaN(amount)) {
     quarterNumber = Math.floor(numberCents/QUARTER_VALUE);
     numberCents = Number(numberCents % QUARTER_VALUE);
     if (quarterNumber === 1) {
-      quarterDisplay = (quarterNumber + " quarter, ");
+        quarterDisplay = (quarterNumber + " quarter, ");
     } else  {
-      quarterDisplay = (quarterNumber + " quarters, ");
+        quarterDisplay = (quarterNumber + " quarters, ");
     }
 
     dimeNumber = Math.floor(numberCents/DIME_VALUE);
     numberCents = Number(numberCents % DIME_VALUE);
     if (dimeNumber === 1) {
-      dimeDisplay = (dimeNumber + " dime, ");
+        dimeDisplay = (dimeNumber + " dime, ");
     } else  {
-      dimeDisplay = (dimeNumber + " dimes, ");
+        dimeDisplay = (dimeNumber + " dimes, ");
     }
 
     nickelNumber = Math.floor(numberCents/NICKEL_VALUE);
     numberCents = Number(numberCents % NICKEL_VALUE);
     if (nickelNumber === 1) {
-      nickelDisplay = (nickelNumber + " nickel, ");
+        nickelDisplay = (nickelNumber + " nickel, ");
     } else  {
-      nickelDisplay = (nickelNumber + " nickels, ");
+        nickelDisplay = (nickelNumber + " nickels, ");
     }
 
     if (numberCents === 0) {
-      pennyDisplay = ("and " + numberCents + " pennies.");
+        pennyDisplay = ("and " + numberCents + " pennies.");
     } else if (numberCents === 1) {
-      pennyDisplay = ("and " + numberCents + " penny.");
+        pennyDisplay = ("and " + numberCents + " penny.");
     } else  {
-      pennyDisplay = ("and " + numberCents + " pennies.");
+        pennyDisplay = ("and " + numberCents + " pennies.");
     }
 
     console.log("\n" + quarterDisplay + dimeDisplay + nickelDisplay + pennyDisplay);
