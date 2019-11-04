@@ -13,11 +13,11 @@ if (Number.isNaN(gradeValue)) {
 } else {
   if (gradeValue <= 100 && gradeValue >= 90) {
       gradeLetter = "A";
-  } else if (gradeValue <= 89 && gradeValue >=80) {
+  } else if (gradeValue < 90 && gradeValue >=80) {
       gradeLetter = "B";
-  } else if (gradeValue <= 79 && gradeValue >= 70) {
+  } else if (gradeValue < 80 && gradeValue >= 70) {
       gradeLetter = "C";
-  } else if (gradeValue <= 69 && gradeValue >= 60) {
+  } else if (gradeValue < 70 && gradeValue >= 60) {
       gradeLetter = "D";
   } else {
       gradeLetter = "F";
