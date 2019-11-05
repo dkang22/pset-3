@@ -8,7 +8,7 @@ const celFreezing = 0;
 const celBoiling = 100;
 const kelFreezing = 273.15;
 const kelBoiling = 373.15;
-const scaleUsed;
+const scaleUsed = "";
 
 const temperatureEntered = Number(readlineSync.question("\nEnter a temperature: "));
 const scale = String(readlineSync.question("Enter a scale: "));
@@ -32,10 +32,20 @@ if (Number.isNaN(temperatureEntered)) {
     console.log("\nInvalid.");
 } else {
     switch (scaleUsed) {
-      case "Farenheit"
+      case "Farenheit":
         if (temperatureEntered >= farBoiling) {
+          console.log("\nGas.");
+        } else if (temperatureEntered <=farFreezing) {
+          console.log("\nSolid.");
+        } else {
           console.log("\nLiquid.");
-        } 
+        }
+        break;
+      case "Celsuis":
+        if (temperatureEntered >= celBoiling) {
+          console.log("\nLiquid.");
+        }
+        break;
 
     }
 }
