@@ -14,9 +14,9 @@ let nickelNumber = 0;
 let pennyNumber = 0;
 
 if (Number.isNaN(amount)) {
-    console.log("\nInvalid.");
+    console.log("\nInvalid.\n");
 } else if (amount < MIN || amount > MAX) {
-    console.log("\nInvalid.");
+    console.log("\nInvalid.\n");
 } else {
     let quarterDisplay;
     let dimeDisplay;

@@ -24,5 +24,5 @@ if (Number.isNaN(yearEntered)) {
 } else if (yearEntered % 4 === 3) {
     console.log("\n" + yearEntered + " is not a leap year.\n");
 } else {
-    console.log("\nInvalid");
+    console.log("\nInvalid.\n");
 }
