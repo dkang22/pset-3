@@ -8,44 +8,46 @@ const celFreezing = 0;
 const celBoiling = 100;
 const kelFreezing = 273.15;
 const kelBoiling = 373.15;
-const scaleUsed = "";
 
 const temperatureEntered = Number(readlineSync.question("\nEnter a temperature: "));
 const scale = String(readlineSync.question("Enter a scale: "));
 let scaleEntered = scale.toLowerCase();
-
-switch (scaleEntered) {
-  case "f":
-    scaleUsed = "Farenheit";
-    break;
-  case "c":
-    scaleUsed = "Celsius";
-    break;
-  case "k":
-    scaleUsed = "Kelvin";
-    break;
-}
 
 if (Number.isNaN(temperatureEntered)) {
     console.log("\nInvalid.");
 } else if (temperatureEntered < MIN || temperatureEntered > MAX) {
     console.log("\nInvalid.");
 } else {
-    switch (scaleUsed) {
-      case "Farenheit":
+    switch (scaleEntered) {
+      case "f":
         if (temperatureEntered >= farBoiling) {
-          console.log("\nGas.");
+            console.log("\nGas.");
         } else if (temperatureEntered <=farFreezing) {
-          console.log("\nSolid.");
+            console.log("\nSolid.");
         } else {
-          console.log("\nLiquid.");
+            console.log("\nLiquid.");
         }
         break;
-      case "Celsuis":
+      case "c":
         if (temperatureEntered >= celBoiling) {
-          console.log("\nLiquid.");
+            console.log("\nGas.");
+        } else if (temperatureEntered <= celFreezing) {
+            console.log("\nSolid.");
+        } else {
+            console.log("\nLiquid.");
         }
         break;
-
+      case "k":
+        if (temperatureEntered >= kelBoiling) {
+            console.log("\nGas.");
+        } else if (temperatureEntered <= kelFreezing) {
+            console.log("\nSolid.");
+        } else {
+            console.log("\nLiquid.");
+        }
+        break;
+      default:
+        console.log("\nInvalid.");
+        break;
     }
 }
