@@ -56,8 +56,5 @@ if (Number.isNaN(amount)) {
         pennyDisplay = ("and " + numberCents + " pennies.");
     }
 
-    console.log("\n" + quarterDisplay + dimeDisplay + nickelDisplay + pennyDisplay);
+    console.log("\n" + quarterDisplay + dimeDisplay + nickelDisplay + pennyDisplay + "\n");
 }
-
-
-//When entering 0.55, the penny value is messed up

@@ -9,19 +9,19 @@ const secondNumber = Number(readlineSync.question(""));
 const thirdNumber = Number(readlineSync.question(""));
 
 if (Number.isNaN(firstNumber || secondNumber || thirdNumber)) {
-    console.log("\nInvalid.");
+    console.log("\nInvalid.\n");
 } else if ((firstNumber || secondNumber || thirdNumber) < MIN || (firstNumber || secondNumber || thirdNumber) > MAX) {
-    console.log("\nInvalid.");
+    console.log("\nInvalid.\n");
 } else if ((firstNumber < secondNumber) && (secondNumber < thirdNumber)) {
-    console.log("\nStrictly increasing.");
+    console.log("\nStrictly increasing.\n");
 } else if ((firstNumber <= secondNumber && secondNumber < thirdNumber) || (firstNumber < secondNumber && secondNumber <= thirdNumber)) {
-    console.log("\nIncreasing.");
+    console.log("\nIncreasing.\n");
 } else if ((firstNumber > secondNumber) && (secondNumber > thirdNumber)) {
-    console.log("\nStrictly decreasing.");
+    console.log("\nStrictly decreasing.\n");
 } else if ((firstNumber >= secondNumber) && (secondNumber > thirdNumber) || (firstNumber > secondNumber) && (secondNumber >= thirdNumber)) {
-    console.log("\nDecreasing.");
+    console.log("\nDecreasing.\n");
 } else if ((firstNumber === secondNumber) && (secondNumber === thirdNumber)) {
-    console.log("\nEqual.");
+    console.log("\nEqual.\n");
 } else {
-    console.log("\nUnordered.");
+    console.log("\nUnordered.\n");
 }

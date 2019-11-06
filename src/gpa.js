@@ -7,64 +7,64 @@ switch (letterGrade) {
   case "a":
   case "A+":
   case "a+":
-    console.log("\nYour GPA is 4.00.");
+    console.log("\nYour GPA is 4.00.\n");
     break;
   case "A-":
   case "a-":
-    console.log("\nYour GPA is 3.67.");
+    console.log("\nYour GPA is 3.67.\n");
     break;
 
   case "B+":
   case "b+":
-    console.log("\nYour GPA is 3.33.");
+    console.log("\nYour GPA is 3.33.\n");
     break;
 
   case "B":
   case "b":
-    console.log("\nYour GPA is 3.00.");
+    console.log("\nYour GPA is 3.00.\n");
     break;
 
   case "B-":
   case "b-":
-    console.log("\nYour GPA is 2.67.");
+    console.log("\nYour GPA is 2.67.\n");
     break;
 
   case "C+":
   case "c+":
-    console.log("\nYour GPA is 2.33.");
+    console.log("\nYour GPA is 2.33.\n");
     break;
 
   case "C":
   case "c":
-    console.log("\nYour GPA is 2.00.");
+    console.log("\nYour GPA is 2.00.\n");
     break;
 
   case "C-":
   case "c-":
-    console.log("\nYour GPA is 1.67.");
+    console.log("\nYour GPA is 1.67.\n");
     break;
 
   case "D+":
   case "d+":
-    console.log("\nYour GPA is 1.33.");
+    console.log("\nYour GPA is 1.33.\n");
     break;
 
   case "D":
   case "d":
-    console.log("\nYour GPA is 1.00.");
+    console.log("\nYour GPA is 1.00.\n");
     break;
 
   case "D-":
   case "d-":
-    console.log("\nYour GPA is 0.67.");
+    console.log("\nYour GPA is 0.67.\n");
     break;
 
   case "F":
   case "f":
-    console.log("\nYour GPA is 0.00.");
+    console.log("\nYour GPA is 0.00.\n");
     break;
 
   default:
-    console.log("\nInvalid.");
+    console.log("\nInvalid.\n");
     break;
 }

@@ -22,8 +22,8 @@ if (Number.isNaN(gradeValue)) {
   } else {
       gradeLetter = "F";
   } if (gradeLetter == "A") {
-      console.log(`\nYou recieved an ${gradeLetter}.`);
+      console.log(`\nYou recieved an ${gradeLetter}.\n`);
   } else {
-      console.log(`\nYou recieved a ${gradeLetter}.`)
+      console.log(`\nYou recieved a ${gradeLetter}.\n`);
   }
 }
