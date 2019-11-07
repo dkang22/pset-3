@@ -8,68 +8,68 @@ let suitDisplay = "";
 
 switch (cardRank) {
   case "2":
-    rankDisplay = "Two";
-    break;
+      rankDisplay = "Two";
+      break;
   case "3":
-    rankDisplay = "Three";
-    break;
+      rankDisplay = "Three";
+      break;
   case "4":
-    rankDisplay = "Four";
-    break;
+      rankDisplay = "Four";
+      break;
   case "5":
-    rankDisplay = "Five";
-    break;
+      rankDisplay = "Five";
+      break;
   case "6":
-    rankDisplay = "Six";
-    break;
+      rankDisplay = "Six";
+      break;
   case "7":
-    rankDisplay = "Seven";
-    break;
+      rankDisplay = "Seven";
+      break;
   case "8":
-    rankDisplay = "Eight";
-    break;
+      rankDisplay = "Eight";
+      break;
   case "9":
-    rankDisplay = "Nine";
-    break;
-  case "10":
-    rankDisplay = "Ten";
-    break;
+      rankDisplay = "Nine";
+      break;
+  case "T":
+      rankDisplay = "Ten";
+      break;
   case "J":
-    rankDisplay = "Jack";
-    break;
+      rankDisplay = "Jack";
+      break;
   case "Q":
-    rankDisplay = "Queen";
-    break;
+      rankDisplay = "Queen";
+      break;
   case "K":
-    rankDisplay = "King";
-    break;
+      rankDisplay = "King";
+      break;
   case "A":
-    rankDisplay = "Ace";
-    break;
+      rankDisplay = "Ace";
+      break;
   default:
-    rankDisplay = null;
-    break;
+      rankDisplay = null;
+      break;
 }
 
 switch (cardSuit) {
   case "C":
-    suitDisplay = "Clubs";
-    break;
+      suitDisplay = "Clubs";
+      break;
   case "D":
-    suitDisplay = "Diamonds";
-    break;
+      suitDisplay = "Diamonds";
+      break;
   case "H":
-    suitDisplay = "Hearts";
-    break;
+      suitDisplay = "Hearts";
+      break;
   case "S":
-    suitDisplay = "Spades";
-    break;
+      suitDisplay = "Spades";
+      break;
   default:
-    suitDisplay = null;
+      suitDisplay = null;
 }
 
 if (rankDisplay == null || suitDisplay == null) {
-  console.log("\nInvalid.\n");
+    console.log("\nInvalid.\n");
 } else {
-  console.log(`\n${rankDisplay} of ${suitDisplay}.\n`);
+    console.log(`\n${rankDisplay} of ${suitDisplay}.\n`);
 }

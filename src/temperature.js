@@ -20,34 +20,34 @@ if (Number.isNaN(temperatureEntered)) {
 } else {
     switch (scaleEntered) {
       case "f":
-        if (temperatureEntered >= farBoiling) {
-            console.log("\nGas.\n");
-        } else if (temperatureEntered <=farFreezing) {
-            console.log("\nSolid.\n");
-        } else {
-            console.log("\nLiquid.\n");
-        }
-        break;
+          if (temperatureEntered >= farBoiling) {
+              console.log("\nGas.\n");
+          } else if (temperatureEntered <=farFreezing) {
+              console.log("\nSolid.\n");
+          } else {
+              console.log("\nLiquid.\n");
+          }
+          break;
       case "c":
-        if (temperatureEntered >= celBoiling) {
-            console.log("\nGas.\n");
-        } else if (temperatureEntered <= celFreezing) {
-            console.log("\nSolid.\n");
-        } else {
-            console.log("\nLiquid.\n");
-        }
-        break;
+          if (temperatureEntered >= celBoiling) {
+                console.log("\nGas.\n");
+          } else if (temperatureEntered <= celFreezing) {
+                console.log("\nSolid.\n");
+          } else {
+                console.log("\nLiquid.\n");
+          }
+          break;
       case "k":
-        if (temperatureEntered >= kelBoiling) {
-            console.log("\nGas.\n");
-        } else if (temperatureEntered <= kelFreezing) {
-            console.log("\nSolid.\n");
-        } else {
-            console.log("\nLiquid.\n");
-        }
-        break;
+          if (temperatureEntered >= kelBoiling) {
+                console.log("\nGas.\n");
+          } else if (temperatureEntered <= kelFreezing) {
+                console.log("\nSolid.\n");
+          } else {
+                console.log("\nLiquid.\n");
+          }
+          break;
       default:
-        console.log("\nInvalid.\n");
-        break;
+          console.log("\nInvalid.\n");
+          break;
     }
 }
